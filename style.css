@@ -72,7 +72,7 @@
     margin-top: 10vw;
     margin-left: 10vw;
   }
-  p {
+  .landing-text {
     position: absolute;
     width: auto;
     height: auto;
@@ -82,7 +82,7 @@
     font-family: raleway, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 2.7vw;
+    font-size: 2.4vw;
     line-height: 37px;
     display: flex;
     align-items: center;
@@ -90,3 +90,84 @@
     
     color: #000000;
   }
+
+  /*Log in Form*/
+  
+  .form {
+    position: absolute;
+    padding: 100px;
+    max-width:600px;
+    margin:120px auto;
+    left: 47vw;
+    text-align: center;
+
+    font-family: raleway, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+  }
+    .form.tabs {
+        display: block;
+        text-align: center;
+    
+        font-family: raleway, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.3vw;
+        line-height: 28px;
+    
+        color: #FF3900;
+      }
+  
+
+  #title {
+    font-family: raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.6vw;
+    line-height: 56px;
+
+    color: #FF3900;
+  }
+  
+  /*footer*/
+  .footer {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    top: 836px;
+    background: #FF3900;
+}
+  .footer a{
+    position: relative;
+    float: left;
+    display: block;
+    padding: 4px 50px;
+    left: 15vw;
+    top: 2vw;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.3vw;
+    line-height: 28px;
+    text-align: center;
+
+    color: white;
+  }
+#copyright {
+    position: absolute;
+    float: center;
+    display: block;
+    top: 4vw;
+    left:47vw;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1vw;
+    line-height: 28px;
+    text-align: center;
+
+    color: white;
+}
