@@ -1,0 +1,314 @@
+html{
+  height: auto;
+  width: 100%;
+}
+body{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+/*Navbar*/
+.navbar {
+  font-size: 18px;
+  background: rgba(196, 196, 196, 0.6);
+  padding-bottom: 10px;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: raleway, sans-serif;
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 26px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+.fa-bars:before{
+  color: black;
+}
+
+#website_logo {
+  height: auto;
+  width: 8vw;
+}
+.title {
+  margin-top: 0vw;
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  color: #FF3900;
+}
+.site_title{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.subtitle {
+  margin: 0;
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #000000;
+}
+
+
+.logo_area{
+display: flex;
+flex-wrap: nowrap;
+display: flex;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+}
+
+.landing-text {
+  max-width: 100%;
+  max-height: 100%;
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.4vw;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+/*Navbar*/
+
+
+
+
+  /*Log in Form*/
+  
+  
+  
+
+
+/*Main Part*/
+.main{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+.main .featured-image{
+  width: 40%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.main .featured-image img{
+  height: 100%;
+  width: 100%;
+}
+.main .content{
+  width: 48%;
+}
+/*Main Part*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Forms*/
+.form {
+  text-align: center;
+  background: rgba(196, 196, 196, 0.014);
+  box-shadow:0 4px 10px 4px;
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+.tabs {
+  border: 1px solid black;
+  background:rgba(255, 55, 0, 0.808);
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 100%;
+  padding: 10px;
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 28px;
+}
+.tabs span{
+  padding: 35px;
+  text-decoration: none;
+  color: rgb(44, 44, 44);
+}
+.tabs span:hover {
+  color:white; 
+  cursor: pointer;
+}
+.tab-content{
+  padding: 0 23px 23px 23px;
+}
+#title {
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #FF3900;
+}
+.main .content .form-heading{
+  width: 100%;
+  text-align: center;
+}
+.main .content .registration-form{
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.forms{
+  width: 100%;
+}
+#login-form{
+  display: none;
+}
+#signup-form{
+  display: block;
+}
+.form-fields{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-around;
+  align-items:  center;
+}
+.form-labels, .form-inputs{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-align: left;
+  margin: 10px;
+}
+
+.form-labels div input{
+  padding: 0 12px 0 12px;
+  margin-left: 10px;
+}
+.form-labels div{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+input[type="submit"]{
+  margin-top: 15px;
+  border: 0;
+  padding: 10px 50px 10px 50px;
+  background-color: #FF3900;
+  color: white;
+}
+input[type="submit"]:hover{
+  cursor: pointer;
+}
+.active-form{
+  color: white;
+}
+.tabs span:hover{
+  color: white;
+}
+/*Forms*/
+
+
+  /*footer*/
+  .footer {
+    width: 100%;
+    height: auto;
+    background: rgba(255, 55, 0, 0.911);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.footer nav{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0 8px 0;
+  width: 100%;
+}
+  .footer a{
+    text-decoration: none;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.0rem;
+    color: white;
+  }
+#copyright {
+    margin: 10px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+}
+
+/*How It Works Tab*/
+.main .how-image{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.main .how-image img{
+  height: 100%;
+  width: 100%;
+}

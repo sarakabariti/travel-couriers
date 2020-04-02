@@ -1,0 +1,109 @@
+/*Media Queries for responsiveness*/
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .main{
+        flex-direction: column;
+      }
+      .main .featured-image{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .main .featured-image img{
+        height: 50%;
+        width: 50%;
+      }
+      .main .how-image{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .main .content{
+        width: 100%;
+      }
+      .footer nav{
+          align-items: center;
+          flex-direction: column;
+      }
+      .footer nav a{
+          padding: 5px;
+      }
+      .landing-text{
+        font-size: 5.4vw;
+      }
+      .title{
+          font-size: 1rem;
+      }
+      .subtitle{
+          font-size: 0.7rem;
+      }
+      #website_logo{
+        width: 18vw;
+      }
+      .site_links a{
+        padding: 14px 7px;
+      }
+      .tab-content {
+        padding: 0 0px 23px 0px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .main{
+    flex-direction: column;
+  }
+  .main .featured-image{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .main .featured-image img{
+    height: 50%;
+    width: 50%;
+  }
+  .main .how-image{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .main .content{
+    width: 100%;
+  }
+  .footer{
+      margin-top: 100px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0;
+      height: 84px;
+      align-items: center;
+    }
+  
+    .main-nav {
+      display: flex;
+      margin-right: 30px;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  
+    .main-nav li {
+      margin: 0;
+    }
+  
+    .nav-links {
+      margin-left: 40px;
+    }
+  
+  
+    .navbar-toggle {
+      display: none;
+    }
+  
+    .logo:hover,
+    .nav-links:hover {
+      color: #FF3900;
+    }
+  }
