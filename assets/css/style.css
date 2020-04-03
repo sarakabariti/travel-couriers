@@ -147,19 +147,6 @@ align-items: center;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Forms*/
 .form {
   text-align: center;
@@ -302,6 +289,23 @@ input[type="submit"]:hover{
 }
 
 /*How It Works Tab*/
+.main .how-content{
+  width: 100%;
+  height: 100%;
+}
+.how-header{
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: 3vw;
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4vw;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  color: #545353;
+}
 .main .how-image{
   width: 100%;
   justify-content: center;
@@ -311,4 +315,132 @@ input[type="submit"]:hover{
 .main .how-image img{
   height: 100%;
   width: 100%;
+}
+
+
+/*About Tab*/
+.about-text{
+
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: 3vw;
+  display: inline-flex;
+  align-items: center;
+  text-align: left;
+
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vw;
+  line-height: 33px;
+  color: #000000;
+}
+.benefits{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.benefits-icons{
+  width:10%
+}
+.caption{
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-flex;
+  text-align: center;
+
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2vw;
+  line-height: 21px;
+  color: #000000;
+}
+
+/*Contact Tab*/
+.contact-text{
+  width: 100%;
+  text-align: center;
+}
+.contact {
+  max-width: 100%;
+  max-height: 100%;
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8vw;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+/* Style inputs, select elements and textareas */
+.container input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+.container input[type=email], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+.container label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+.container input[type=submit] {
+  background-color: #FF3900;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4vw;
+  line-height: 21px;
+  color: #000000;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.container .row:after {
+  content: "";
+  display: table;
+  clear: both;
 }

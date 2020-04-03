@@ -48,20 +48,60 @@
         </ul>
       </nav>
 
-      <div class="main">
+    <div class="main">
         <div class="how-content">
-            <!--Home Text-->
             <div class="form-heading">
-              <h1 class="how-header">How It Works:</h1>
+              <h1 class="how-header">Contact Us:</h1>
+                <div class="contact-text">
+                    <p class="contact">
+                    Have any questions or concerns? </br> We would love to hear from you!
+                    </p>
+                </div>
             </div>
-        
-            <!--image-->
-            <div class="how-image">
-              <img id="how_image" src="./assets/images/how-it-works.png" alt="how-it-works">
-            </div>
+            <!--Contact Form-->
+            <div class="container">
+                <form action="#">
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="fname">First Name</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" id="email" name="email" placeholder="Your email.." required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="subject">Subject</label>
+                    </div>
+                    <div class="col-75">
+                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <input type="submit" value="Submit">
+                  </div>
+                </form>
+              </div>
             
+        
         </div>
-      </div>      
+    </div>      
 
   <!--Footer-->
   <div class="footer">

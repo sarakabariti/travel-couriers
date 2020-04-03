@@ -20,6 +20,9 @@
       .main .content{
         width: 100%;
       }
+      .main .how-content{
+        width: 100%;
+      }
       .footer nav{
           align-items: center;
           flex-direction: column;
@@ -29,6 +32,31 @@
       }
       .landing-text{
         font-size: 5.4vw;
+      }
+      .contact{
+        font-size: 4.8vw;
+      }
+      .how-header{
+        font-size: 7vw;
+      }
+      .about-text{
+        font-size: 5vw;
+      }
+      .caption{
+        font-weight: 4.2vw;
+      }
+      .benefits-icons{
+        width:20%
+      }
+      .benefits{
+        width:100%
+      }
+      .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+      .main .how-content .container{
+        font-size: 4.4vw;
       }
       .title{
           font-size: 1rem;
@@ -65,6 +93,9 @@
     margin-bottom: 20px;
   }
   .main .content{
+    width: 100%;
+  }
+  .main .how-content{
     width: 100%;
   }
   .footer{
