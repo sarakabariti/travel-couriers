@@ -288,6 +288,10 @@ input[type="submit"]:hover{
     color: white;
 }
 
+
+
+
+
 /*How It Works Tab*/
 .main .how-content{
   width: 100%;
@@ -316,6 +320,35 @@ input[type="submit"]:hover{
   height: 100%;
   width: 100%;
 }
+.how-text{
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.role{
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.8vw;
+  color: black;
+}
+.steps{
+  font-family: raleway, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2vw;
+  line-height: 26px;
+  color: #000000;
+}
+
+
+
+
+
+
 
 
 /*About Tab*/
@@ -358,6 +391,9 @@ input[type="submit"]:hover{
   line-height: 21px;
   color: #000000;
 }
+
+
+
 
 /*Contact Tab*/
 .contact-text{
