@@ -293,11 +293,120 @@ input[type="submit"]:hover{
 
 
 /*How It Works Tab*/
-.main .how-content{
+.how-it-works{
+  height: auto;
   width: 100%;
-  height: 100%;
 }
-.how-header{
+.how-it-works h1{
+  font-weight: 600;
+  margin-left: 80px;
+  font-size: 2.5rem;
+  font-family: raleway, sans-serif;
+  color: #545353;
+}
+.how-it-works p{
+  font-family: raleway, sans-serif;
+}
+.pictorial-view, .role{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.role-img{
+  position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.pictorial-view{
+  margin-top: 125px;
+}
+.arrow-up{
+  transform: translate(1px, -19px) rotate(29deg);
+}
+.arrow-down{
+  transform: rotate(-29deg) translate(-138px, -7px);
+}
+.types, .traveller, .box1, .requester, .box2{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.types{
+  flex-direction: column;
+}
+.traveller{
+  justify-content: space-between;
+  transform: translate(-94px, -46px);
+}
+.requester{
+  transform: translate(-94px, -16px);
+}
+.type-title{
+  margin-right: 18px;
+}
+.box1{
+  justify-content: space-between;
+  background: url('../images/line.png') no-repeat;
+  background-size: 97% 130%;
+  background-position: -8px, 100%;
+  background-position-y: -70px;
+}
+.boxes{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.upper-box-1{
+  flex-basis: 204px;
+}
+.upper-box-2{
+  align-items: center;
+  flex-basis: 174px;
+  transform: translateY(-90px);
+}
+.upper-box-3{
+  align-items: center;
+  flex-basis: 150px;
+  transform: translateY(16px);
+}
+.upper-box-4{
+  align-items: center;
+  flex-basis: 160px;
+  transform: translateY(-55px);
+}
+
+.box2{
+  justify-content: space-between;
+  background: url('../images/line.png') no-repeat;
+  background-size: 97% 130%;
+  background-position: -14px, 100%;
+  background-position-y: 30px;
+  transform: scaleY(-1);
+}
+.upper-box-5{
+  flex-basis: 22%;
+  transform: scaleY(-1);
+}
+.upper-box-6{
+  flex-basis: 21%;
+  align-items: center;
+  transform: scaleY(-1) translateY(-65px);
+}
+.upper-box-7{
+  flex-basis: 16%;
+  align-items: center;
+  transform: scaleY(-1) translateY(-25px);
+}
+.upper-box-8{
+  flex-basis: 18%;
+  align-items: center;
+  transform: scaleY(-1) translateY(-64px);
+}
+
+
+
+
+/*About Tab*/
+.header{
   max-width: 100%;
   max-height: 100%;
   margin-left: 3vw;
@@ -310,48 +419,6 @@ input[type="submit"]:hover{
   text-align: center;
   color: #545353;
 }
-.main .how-image{
-  width: 100%;
-  justify-content: center;
-  display: flex;
-  flex-wrap: nowrap;
-}
-.main .how-image img{
-  height: 100%;
-  width: 100%;
-}
-.how-text{
-  max-width: 100%;
-  max-height: 100%;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.role{
-  font-family: raleway, sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1.8vw;
-  color: black;
-}
-.steps{
-  font-family: raleway, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.2vw;
-  line-height: 26px;
-  color: #000000;
-}
-
-
-
-
-
-
-
-
-/*About Tab*/
 .about-text{
 
   max-width: 100%;
