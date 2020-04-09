@@ -67,7 +67,10 @@
     }
     .tab-content {
       padding: 0 0px 23px 0px;
-  }
+    }
+    #fblogo {
+      width:11.5vw;
+    }
 
 
 
