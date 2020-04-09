@@ -90,7 +90,11 @@
                         </div>
                         <div>
                           <label>Password<span style="color: red;">*</span></label>
-                          <input type="password" placeholder="xxxxxxxx" required>
+                          <input type="password" placeholder="xxxxxxxx" id="password" required>
+                        </div>
+                        <div>
+                          <label>Confirm Password<span style="color: red;">*</span></label>
+                          <input type="password" placeholder="xxxxxxxx" id="confirm_password" required>
                         </div>
                       </div>
                     </div>
@@ -105,16 +109,20 @@
                       <div class="form-labels">
                         <div>
                           <label>Email<span style="color: red;">*</span></label>
-                          <input type="email" placeholder="abc@example.com" required>
+                          <input type="email" id="email" placeholder="abc@example.com" required>
                         </div>
                         <div>
                           <label>Password<span style="color: red;">*</span></label>
                           <input type="password" placeholder="xxxxxxxx" required>
                         </div>
+                        <div>
+                          <label for="rememberMe">Remember me</label>
+                          <input type="checkbox" value="lsRememberMe" id="rememberMe">
+                        </div>
                       </div>
                     </div>
                     <p class="forgot"><a href="#">Forgot Password?</a></p>
-                    <input id="submit" type="submit" value="Log In">
+                    <input id="submit" type="submit" value="Log In" onclick="lsRememberMe()">
                   </form>
                 </div>
             </div>
