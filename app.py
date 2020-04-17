@@ -37,6 +37,19 @@ def about():
 
 @app.route('/contact', methods=['POST', 'GET'])
 def contact():
+    if request.method == "POST":
+        firstname = request.form['firstname']
+        lastname = request.form['lastname']
+        email = request.form['email']
+        subject = request.form["subject"]
+
+        contact = contact_us(firstname=firstname,
+                             lastname=lastname,
+                             email=email,
+                             subject=subject)
+        db.session.add(contact)
+        db.session.commit()
+
     return render_template("contact.html")
 
 
