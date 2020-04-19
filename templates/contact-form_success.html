@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WASI</title>
+    <!--import font: Raleway-->
+    <link rel="stylesheet" href="https://use.typekit.net/ohq0bte.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/responsive.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+  </head>  
+  
+  <body>
+    <header>
+      <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </span>
+        <a href="#" class="logo">
+          <div class="logo_area">
+            <div>
+              <img id="website_logo" src="{{url_for('static',filename='/images/logo.png')}}" alt="Logo">
+            </div>
+            <div class="site_title">
+              <h1 class="title">WASI</h1>
+              <h2 class="subtitle">Travel Couriers</h2>
+            </div>
+          </div>
+        </a>
+        <ul class="main-nav" id="js-menu">
+          <li>
+            <a href="{{url_for('index')}}" class="nav-links">HOME</a>
+          </li>
+          <li>
+            <a href= "{{url_for('how')}}"class="nav-links">HOW IT WORKS</a>
+          </li>
+          <li>
+            <a href="{{url_for('about')}}" class="nav-links">ABOUT</a>
+          </li>
+          <li>
+            <a href= "{{url_for('contact')}}"class="nav-links">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+
+    <div class="main">
+        <div class="how-content">
+            <div class="form-heading">
+              <h1 class="header">Contact Us:</h1>
+                <div class="contact-text">
+                    <p class="contact">
+                    Message sent successfully! </br> We will get back to you shortly!
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </p>
+                </div>
+            </div>
+        
+        </div>
+    </div>      
+
+  <!--Footer-->
+  <div class="footer">
+    <nav>
+      <a href="{{url_for('about')}}">About</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="{{url_for('contact')}}">Contact</a>
+        <a href="#">Language</a>
+    </nav>
+    <p id="copyright">© 2020 WASI</p>
+  </div>
+    </header>
+    <!-- import the webpage's javascript file -->
+    <script src="{{url_for('static',filename='/js/script.js')}}"></script>
+  </body>
+</html>
