@@ -47,7 +47,7 @@ def index():
                     db.session.commit()
 
                     Message = "success"
-                    return render_template("index.html", Message_up=Message)
+                    return render_template("requests.html", Message_up=Message)
 
                 except exc.IntegrityError: 
                     db.session.rollback()
@@ -64,7 +64,7 @@ def index():
 
                 if login is not None:
                     Message_success = "success"
-                    return render_template("index.html", Message=Message_success)
+                    return render_template("requests.html", Message=Message_success)
 
                 if login is None:
                     error = "Incorrect combination of password or email"
@@ -100,6 +100,10 @@ def contact():
 @app.route('/how')
 def how():
     return render_template("how.html")
+
+@app.route('/requests')
+def requests():
+    return render_template("requests.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
