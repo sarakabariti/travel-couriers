@@ -1,8 +1,7 @@
-from flask import Flask, render_template, url_for, request, redirect, session
+from flask import Flask, render_template, url_for, request, redirect, session, flash
 
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import exc
-
 
 app = Flask(__name__)
 
@@ -25,6 +24,7 @@ class contact_us(db.Model):
     lastname = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(120), nullable=False)
     subject = db.Column(db.String(1000), nullable=False)
+
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
@@ -67,9 +67,10 @@ def index():
                     return render_template("requests.html", Message=Message_success)
 
                 if login is None:
-                    error = "Incorrect combination of password or email"
+                    error = "incorrect combination of password or email"
                     return render_template("index.html", Message=error)
-
+                login_user(user, remember=request.form["rememberMe"])
+                return redirect(url_for('requests'))
     return render_template("index.html")
 
 

@@ -572,6 +572,10 @@ input[type="submit"]:hover{
 
 
 /*Requests*/ 
+
+.main .requests-content{
+  width: 100%;
+}
 .search-bar {
   display: flex;
   float: right;
@@ -592,3 +596,5 @@ input[type="submit"]:hover{
   border: 2px solid black;
   cursor: pointer;
 }
+
+

@@ -62,3 +62,5 @@ navBarToggle.addEventListener("click", function() {
 document.getElementById("submit").addEventListener("click", function(event){
     event.preventDefault()
   });
+
+//country filter

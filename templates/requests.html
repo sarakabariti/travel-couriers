@@ -21,6 +21,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body>
@@ -63,13 +66,69 @@
       </nav>
 
       <div class="main">
-        <div class="how-content">
+        <div class="requests-content">
           <div class=search-bar>
             <form action="/">
               <input type="text" placeholder="Search.." name="search">
               <button type="submit"><i class="fa fa-search"></i></button>
             </form>
           </div>
+          
+          <!--Price range filter-->
+          <script>
+            $( function() {
+              $( "#slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: 1000,
+                values: [ 0, 300 ],
+                slide: function( event, ui ) {
+                  $( "#amount" ).val( "JOD" + ui.values[ 0 ] + " - JOD" + ui.values[ 1 ] );
+                }
+              });
+              $( "#amount" ).val( "JOD" + $( "#slider-range" ).slider( "values", 0 ) +
+                " - JOD" + $( "#slider-range" ).slider( "values", 1 ) );
+            } );
+          </script>
+          <p>
+            <label for="amount" style="font-family: raleway, sans-serif; margin-left: 16px;">Price range:</label>
+            <input type="text" id="amount" readonly style="border:0; color:#FF3900; font-weight:bold; font-family: raleway, sans-serif;">
+          </p>
+
+          <div id="slider-range" style= "width: 25%; margin-left: 20px;"></div>
+          <!--Price range filter-->
+
+          <!--Weight range filter-->
+          <script>
+            $( function() {
+              $( "#slider-range2" ).slider({
+                range: true,
+                min: 0,
+                max: 30,
+                values: [ 0, 300 ],
+                slide: function( event, ui ) {
+                  $( "#amount2" ).val( "kg" + ui.values[ 0 ] + " - kg" + ui.values[ 1 ] );
+                }
+              });
+              $( "#amount2" ).val( "kg" + $( "#slider-range2" ).slider( "values", 0 ) +
+                " - kg" + $( "#slider-range2" ).slider( "values", 1 ) );
+            } );
+          </script>
+          <p>
+            <label for="amount2" style="font-family: raleway, sans-serif; margin-left: 16px;">Weight of item:</label>
+            <input type="text" id="amount2" readonly style="border:0; color:#FF3900; font-weight:bold; font-family: raleway, sans-serif;">
+          </p>
+
+          <div id="slider-range2" style= "width: 20%; margin-left: 20px;"></div>
+
+          <!--Weight range filter-->
+
+          <!--Country filter-->
+          
+
+
+          
+          
         </div>
       </div>
 
@@ -87,5 +146,7 @@
     </header>
     <!-- import the webpage's javascript file -->
     <script src="{{url_for('static',filename='/js/script.js')}}"></script>
+
+
   </body>
 </html>
