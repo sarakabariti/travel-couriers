@@ -63,4 +63,11 @@ document.getElementById("submit").addEventListener("click", function(event){
     event.preventDefault()
   });
 
-//country filter
+//Add Request Form
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
