@@ -9,19 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- import the webpage's stylesheet -->
-    <link
-      rel="stylesheet"
-      href="{{url_for('static',filename='/css/style.css')}}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{url_for('static',filename='/css/responsive.css')}}"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/style.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/responsive.css')}}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <!--Jquery modal-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
@@ -70,67 +64,63 @@
         </ul>
       </nav>
 
-      <div class="main">
-        <div class="requests-content">
-          <div class=search-bar>
-            <form action="/">
-              <input type="text" placeholder="Search.." name="search">
-              <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-          </div>
+      <div class="requests-content">
+        <div class="filters">
+            <!--Price range filter-->
+            <script>
+              $( function() {
+                $( "#slider-range" ).slider({
+                  range: true,
+                  min: 0,
+                  max: 1000,
+                  values: [ 0, 300 ],
+                  slide: function( event, ui ) {
+                    $( "#amount" ).val( "JOD" + ui.values[ 0 ] + " - JOD" + ui.values[ 1 ] );
+                  }
+                });
+                $( "#amount" ).val( "JOD" + $( "#slider-range" ).slider( "values", 0 ) +
+                  " - JOD" + $( "#slider-range" ).slider( "values", 1 ) );
+              } );
+            </script>
+            <div class="labels">
+              <p>
+                <label for="amount" style="font-family: raleway, sans-serif;">Price range:</label>
+                <input type="text" id="amount" readonly style="border:0; color:#FF3900; font-weight:bold; font-family: raleway, sans-serif;">
+              </p>
+              <div id="slider-range"></div>
+            <!--Price range filter-->
+            </div>
+  
+            
+  
+            <!--Weight range filter-->
+            <script>
+              $( function() {
+                $( "#slider-range2" ).slider({
+                  range: true,
+                  min: 0,
+                  max: 30,
+                  values: [ 0, 300 ],
+                  slide: function( event, ui ) {
+                    $( "#amount2" ).val( "kg" + ui.values[ 0 ] + " - kg" + ui.values[ 1 ] );
+                  }
+                });
+                $( "#amount2" ).val( "kg" + $( "#slider-range2" ).slider( "values", 0 ) +
+                  " - kg" + $( "#slider-range2" ).slider( "values", 1 ) );
+              } );
+            </script>
+            <div class="labels">
+              <p>
+                <label for="amount2" style="font-family: raleway, sans-serif;">Weight of item:</label>
+                <input type="text" id="amount2" readonly style="border:0; color:#FF3900; font-weight:bold; font-family: raleway, sans-serif;">
+              </p>
+              <div id="slider-range2"></div>
+  
+            <!--Weight range filter-->
+            </div>
+        </div>
+
           
-          <!--Price range filter-->
-          <script>
-            $( function() {
-              $( "#slider-range" ).slider({
-                range: true,
-                min: 0,
-                max: 1000,
-                values: [ 0, 300 ],
-                slide: function( event, ui ) {
-                  $( "#amount" ).val( "JOD" + ui.values[ 0 ] + " - JOD" + ui.values[ 1 ] );
-                }
-              });
-              $( "#amount" ).val( "JOD" + $( "#slider-range" ).slider( "values", 0 ) +
-                " - JOD" + $( "#slider-range" ).slider( "values", 1 ) );
-            } );
-          </script>
-          <div class="labels">
-            <p>
-              <label for="amount" style="font-family: raleway, sans-serif; margin-left: 16px;">Price range:</label>
-              <input type="text" id="amount" readonly style="border:0; color:#FF3900; font-weight:bold; font-family: raleway, sans-serif;">
-            </p>
-          </div>
-
-          <div id="slider-range" style= "width: 25%; margin-left: 20px;"></div>
-          <!--Price range filter-->
-
-          <!--Weight range filter-->
-          <script>
-            $( function() {
-              $( "#slider-range2" ).slider({
-                range: true,
-                min: 0,
-                max: 30,
-                values: [ 0, 300 ],
-                slide: function( event, ui ) {
-                  $( "#amount2" ).val( "kg" + ui.values[ 0 ] + " - kg" + ui.values[ 1 ] );
-                }
-              });
-              $( "#amount2" ).val( "kg" + $( "#slider-range2" ).slider( "values", 0 ) +
-                " - kg" + $( "#slider-range2" ).slider( "values", 1 ) );
-            } );
-          </script>
-          <div class="labels">
-            <p>
-              <label for="amount2" style="font-family: raleway, sans-serif; margin-left: 16px;">Weight of item:</label>
-              <input type="text" id="amount2" readonly style="border:0; color:#FF3900; font-weight:bold; font-family: raleway, sans-serif;">
-            </p>
-          </div>
-
-          <div id="slider-range2" style= "width: 20%; margin-left: 20px;"></div>
-
-          <!--Weight range filter-->
 
           <!--Country filter-->
           <div class="country">
@@ -393,43 +383,50 @@
             } );
           </script>
          
-          <p style="font-family: raleway, sans-serif;">Deliver by: <input type="text" id="datepicker"></p>
+          <!-- <p style="font-family: raleway, sans-serif;">Deliver by:</p> -->
+          <input type="text" id="datepicker" placeholder="Deliver by:">
         </div>
 
-        <!--Add request button-->
-        <button class="add-request" onclick="openForm()">Add Request</button>
-        <div class="request-form" id="myForm"> 
-          <form action="/" method="POST" class="form-container">
-            <h1>ADD REQUEST:</h1>
-        
-            <label for="img">Add Picture:</label>
-            <input type="file" id="img" name="img" accept="image/*">
-        
-            <label for="link">Link/Comment:</label>
-            <input type="text" placeholder="Where can the item be bought?" name="link">
-
-            <label for="weight">Weight:</label>
-            <input type="text" placeholder="Weight of item" name="weight">
-
-            <label for="date">Deliver by:</label>
-            <input type="date" name="date">
-
-            <label for="country">Buy from:</label>
-            <input type="text" placeholder="Country you want the item from" name="country">
-
-            <label for="price">Price (JOD):</label>
-            <input type="text" placeholder="How much does item cost?" name="price">
-
-            <label for="reward">Reward (JOD):</label>
-            <input type="text" placeholder="How much will you pay the traveller?" name="reward">
-        
-            <button type="submit" class="btn">Submit</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        <div class=search-bar>
+          <form action="/">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
           </form>
         </div>
-          
-          
+
         </div>
+      </div>
+
+      <!--Add request button-->
+     <div class="request-btn"><a href="#myForm" rel="modal:open"><button class="add-request">Add Request</button></a></div>
+      <div class="request-form" id="myForm"> 
+        <form action="/" method="POST" class="form-container">
+          <h1>ADD REQUEST:</h1>
+      
+          <label for="img">Add Picture:</label>
+          <input type="file" id="img" name="img" accept="image/*">
+      
+          <label for="link">Link/Comment:</label>
+          <input type="text" placeholder="Where can the item be bought?" name="link">
+
+          <label for="weight">Weight:</label>
+          <input type="text" placeholder="Weight of item" name="weight">
+
+          <label for="date">Deliver by:</label>
+          <input type="date" name="date">
+
+          <label for="country">Buy from:</label>
+          <input type="text" placeholder="Country you want the item from" name="country">
+
+          <label for="price">Price (JOD):</label>
+          <input type="text" placeholder="How much does item cost?" name="price">
+
+          <label for="reward">Reward (JOD):</label>
+          <input type="text" placeholder="How much will you pay the traveller?" name="reward">
+      
+          <button type="submit" class="btn">Submit</button>
+          <a href="#" rel="modal:close"><button type="button" class="btn cancel">Close</button></a>
+        </form>
       </div>
 
       <!--Footer-->
@@ -444,6 +441,8 @@
         <p id="copyright">© 2020 WASI</p>
       </div>
     </header>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <!-- import the webpage's javascript file -->
     <script src="{{url_for('static',filename='/js/script.js')}}"></script>
 
