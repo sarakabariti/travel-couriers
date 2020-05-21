@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 app.config['secret_key'] = "secretkey"
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\\Users\\DELL\\Documents\\foundations\\travel-couriers\\database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)  
 
 class user(db.Model):
