@@ -13,7 +13,7 @@ cycler==0.10.0
 distlib==0.3.0
 Django==2.2.7
 django-filter==1.1.0
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 djangorestframework-filters==0.11.1
 dnspython==1.16.0
 filelock==3.0.12
