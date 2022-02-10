@@ -11,7 +11,7 @@ colorama==0.4.1
 cryptography==2.8
 cycler==0.10.0
 distlib==0.3.0
-Django==2.2.7
+Django==2.2.27
 django-filter==1.1.0
 djangorestframework==3.10.3
 djangorestframework-filters==0.11.1
